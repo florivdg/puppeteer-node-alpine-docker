@@ -16,7 +16,8 @@ RUN apk add --no-cache \
       freetype \
       harfbuzz \
       ca-certificates \
-      ttf-freefont
+      ttf-freefont \
+      dumb-init
 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
@@ -24,5 +25,8 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 
 # Bundle app source
 COPY . .
+
+# It's a good idea to use dumb-init to help prevent zombie chrome processes.
+ENTRYPOINT ["dumb-init", "--"]
 
 CMD [ "npm", "start" ]
