@@ -1,0 +1,20 @@
+{
+  "name": "puppeteer-node-docker-tmt",
+  "version": "0.0.1",
+  "description": "A sample Node app using Puppeteer with Docker",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node src/index.js"
+  },
+  "keywords": [],
+  "author": "Florian van der Galiën<florian.vandergalien@tmt.de>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "puppeteer": "^13.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
