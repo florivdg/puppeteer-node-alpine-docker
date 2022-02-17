@@ -1,14 +1,5 @@
 FROM node:lts-alpine
 
-# Create app directory
-WORKDIR /app
-
-# Install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
-
-RUN npm install --only=production
-
 # Installs latest Chromium package.
 RUN apk add --no-cache \
       chromium \
@@ -23,10 +14,5 @@ RUN apk add --no-cache \
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
-# Bundle app source
-COPY . .
-
 # It's a good idea to use dumb-init to help prevent zombie chrome processes.
 ENTRYPOINT ["dumb-init", "--"]
-
-CMD [ "npm", "start" ]
