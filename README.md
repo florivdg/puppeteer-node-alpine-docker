@@ -1,8 +1,8 @@
-[![Docker Image CI](https://github.com/florivdg/puppeteer-node-alpine-docker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/florivdg/puppeteer-node-alpine-docker/actions/workflows/docker-image.yml)
+[![Docker Image CI](https://github.com/florivdg/puppeteer-node-alpine-docker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/florivdg/puppeteer-node-alpine-docker/actions/workflows/docker-image.yml) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/florivdg/puppeteer-node-alpine-docker?label=Docker%20Image%20Size&sort=date)
 
-# Puppeteer Node LTS Alpine Docker Image
+# Puppeteer Node Current Alpine Docker Image
 
-Use Puppeteer inside a Docker container with Node LTS alpine as a base image.
+Use Puppeteer inside a Docker container with the current `node:alpine` base image.
 
 ## Docker
 
